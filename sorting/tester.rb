@@ -24,6 +24,10 @@ class Tester
     puts "STEP=[#{arr.join(", ")}]"
   end
 
+  def to_s
+    "| #{@data.join(" | ")} |"
+  end
+
   # calls the sort method with new data; retains original shuffled data
   (self.methods - Object.methods).each do |method_name|
     define_method(method_name) {
